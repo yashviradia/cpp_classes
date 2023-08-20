@@ -3,27 +3,25 @@
 
 #include <string>
 
+// everything in class is by default 'private'.
+
 class Person {
     // Encapsulation prevents data manipulation.
     // To change this encapsulated data 'Getter' and 'Setter' functions are used.
 private:
     std::string firstName;
     std::string lastName;
-    int age;
-    // everything in class is by default 'private'.
+
 
 public:
     // if no default contructor is needed, then make it equal to 'delete'
     Person();
     Person(std::string first, std::string last);
 
-    std::string getFirstName();
+    // destructor helps in clearing memory when object is no longer needed.
+    ~Person();
 
-    void setFirstName(std::string name);
-    void setLastName(std::string name);
-    void setAge(int newAge);
-
-    std::string printFullName();
+    std::string getFullName();
 };
 
 

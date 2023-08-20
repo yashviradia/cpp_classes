@@ -1,24 +1,25 @@
+// at first include standard libraries. Then import rest of header files.
 #include <iostream>
-#include "Person.h"
-
 using std::cout;
 using std::endl;
+
+#include "Person.h"
+#include "Twitter.h"
+
 
 int main() {
 
     Person tony("Tony", "Stark");
-    Person pepper;
+    Person pepper("Pepper", "Potts");
 
-    pepper.setFirstName("Pepper");
-    pepper.setLastName("Potts");
+    Twitter twitt("Tony", "Stark", "Tony S.");
 
-    tony.setAge(18);
+    cout << twitt.getFullName() << endl;
 
     // This is function declaration
     // Person steve() - this is function 'steve' which gives output of datatype 'Person'
 
     // One of the biggest advantage of creating class is member functions.
-    cout << pepper.getFirstName() << endl;
 
     return 0;
 }
