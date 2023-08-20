@@ -20,33 +20,17 @@ Person::Person()
 Person::Person(string first, string last)
 : firstName(first), lastName(last)
 {
-    cout << "Hi, I'm " + printFullName() << endl;
+    cout << "Hi, I'm " + getFullName() << endl;
 }
 
-string Person::getFirstName() {
-    return firstName;
+Person::~Person() {
+    cout << firstName + " " + lastName + " will be deleted." << endl;
 }
 
-void Person::setFirstName(std::string name) {
-    firstName = name;
-}
-
-void Person::setLastName(std::string name) {
-    lastName = name;
-}
-
-void Person::setAge(int newAge) {
-    if (newAge > 0) {
-        age = newAge;
-    }
-    else {
-        age = 0;
-    }
-}
 
 // here is scope resolution operator very important i.e. 'Person'
-std::string Person::printFullName()
+std::string Person::getFullName()
 {
-    return firstName + lastName;
+    return firstName + " " + lastName;
 }
 

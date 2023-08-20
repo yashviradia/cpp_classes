@@ -61,6 +61,12 @@ build CMakeFiles/classes.dir/Person.cpp.o: CXX_COMPILER__classes_unscanned_Debug
   OBJECT_DIR = CMakeFiles/classes.dir
   OBJECT_FILE_DIR = CMakeFiles/classes.dir
 
+build CMakeFiles/classes.dir/Twitter.cpp.o: CXX_COMPILER__classes_unscanned_Debug /Users/yashviradia/CLionProjects/classes/Twitter.cpp || cmake_object_order_depends_target_classes
+  DEP_FILE = CMakeFiles/classes.dir/Twitter.cpp.o.d
+  FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/classes.dir
+  OBJECT_FILE_DIR = CMakeFiles/classes.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target classes
@@ -69,7 +75,7 @@ build CMakeFiles/classes.dir/Person.cpp.o: CXX_COMPILER__classes_unscanned_Debug
 #############################################
 # Link the executable classes
 
-build classes: CXX_EXECUTABLE_LINKER__classes_Debug CMakeFiles/classes.dir/main.cpp.o CMakeFiles/classes.dir/Person.cpp.o
+build classes: CXX_EXECUTABLE_LINKER__classes_Debug CMakeFiles/classes.dir/main.cpp.o CMakeFiles/classes.dir/Person.cpp.o CMakeFiles/classes.dir/Twitter.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk
   OBJECT_DIR = CMakeFiles/classes.dir
   POST_BUILD = :
