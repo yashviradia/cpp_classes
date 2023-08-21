@@ -3,19 +3,30 @@
 using std::cout;
 using std::endl;
 
+#include <vector>
+using std::vector;
+
 #include "../libPersons/Person.h"
 #include "../libPersons/Twitter.h"
+#include "House.h"
 
+using Address = House*;
+
+class Packet {
+public:
+    Address address;
+};
 
 int main() {
 
     // namespace 'Persons' is useful here, as other directories might have
     // class named 'Person'. It would then result to name collision.
-    Persons::Person const tony("Tony", "Stark");
-    Persons::Person const pepper("Pepper", "Potts");
+    vector<House> wallStreet = {House(1), House(0), House(0)};
 
-    cout << tony.getID() << endl;
-    cout << pepper.getID() << endl;
+    Packet packet;
+    packet.address = &wallStreet[0];
+
+    (packet.address+1)->ringDoorbell();
 
     // This is function declaration
     // Person steve() - this is function 'steve' which gives output of datatype 'Person'

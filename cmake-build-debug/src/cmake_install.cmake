@@ -1,4 +1,4 @@
-# Install script for directory: /Users/yashviradia/CLionProjects/classes
+# Install script for directory: /Users/yashviradia/CLionProjects/classes/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,16 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/yashviradia/CLionProjects/classes/cmake-build-debug/src/cmake_install.cmake")
+  include("/Users/yashviradia/CLionProjects/classes/cmake-build-debug/src/app/cmake_install.cmake")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT)
-  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-else()
-  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/yashviradia/CLionProjects/classes/cmake-build-debug/src/libPersons/cmake_install.cmake")
 endif()
 
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/yashviradia/CLionProjects/classes/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
