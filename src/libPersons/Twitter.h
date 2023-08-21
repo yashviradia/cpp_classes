@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "Person.h";
+#include "Person.h"
 
 
 class Twitter
@@ -14,8 +14,13 @@ private:
 public:
     Twitter(std::string first, std::string last, std::string handle);
 
+    virtual ~Twitter();
+
     std::string getFullName() const override;
+
 };
 
 
 #endif //CLASSES_TWITTER_H
+
+

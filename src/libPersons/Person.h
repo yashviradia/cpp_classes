@@ -24,7 +24,7 @@ public:
     Person(std::string first, std::string last);
 
     // destructor helps in clearing memory when object is no longer needed.
-    ~Person();
+    virtual ~Person();
 
     int getID() const;
 

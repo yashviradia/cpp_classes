@@ -24,10 +24,11 @@ Person::Person()
 Person::Person(string first, string last)
         : firstName(first), lastName(last), id(g_id) {
     ++g_id;
+
 }
 
 Person::~Person() {
-    cout << firstName + " " + lastName + " will be deleted." << endl;
+
 }
 
 int Person::getID() const {
