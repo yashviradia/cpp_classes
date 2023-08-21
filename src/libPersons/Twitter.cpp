@@ -3,10 +3,17 @@
 #include <string>
 using std::string;
 
+#include <iostream>
+using std::cout;
+using std::endl;
 
 
 Twitter::Twitter(std::string first, std::string last, std::string handle)
         : Person(first, last), twitterhandle(handle) {
+
+}
+
+Twitter::~Twitter() {
 
 }
 
