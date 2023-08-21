@@ -7,8 +7,15 @@ using std::endl;
 
 
 void printTwitterHandle(Person const & p) {
-    // static casting
-    Twitter const & referenceTwitter = static_cast<Twitter const &>(p);
+    // dynamic casting - helps in testing polymorphismus.
+    Twitter const * pt = dynamic_cast<Twitter const *>(&p);
+
+    if (pt) {
+        cout << pt->getTwitterHandle() << endl;
+    }
+    else {
+        cout << "Casting not possible." << endl;
+    }
 }
 
 int main() {
@@ -19,6 +26,7 @@ int main() {
 
     Twitter& revertTwitter = static_cast<Twitter&>(p);
 
+    printTwitterHandle(p);
 
 
     return 0;
