@@ -18,6 +18,8 @@ public:
 
     std::string getFullName() const override;
 
+    std::string getTwitterHandle() const;
+
 };
 
 

@@ -28,7 +28,8 @@ public:
 
     int getID() const;
 
-    virtual std::string getFullName() const;
+    // with this method assigned to '0', 'Person' is now abstract class.
+    virtual std::string getFullName() const = 0;
 };
 
 
