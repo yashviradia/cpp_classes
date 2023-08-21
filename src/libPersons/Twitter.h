@@ -5,16 +5,17 @@
 
 #include "Person.h";
 
-namespace Persons {
 
-    class Twitter
-            : public Person {
-    private:
-        std::string twitterhandle;
+class Twitter
+        : public Person {
+private:
+    std::string twitterhandle;
 
-    public:
-        Twitter(std::string first, std::string last, std::string handle);
-    };
+public:
+    Twitter(std::string first, std::string last, std::string handle);
 
-}
+    std::string getFullName() const override;
+};
+
+
 #endif //CLASSES_TWITTER_H
