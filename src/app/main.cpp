@@ -2,32 +2,26 @@
 using std::cout;
 using std::endl;
 
-#include "Person.h"
-#include "Twitter.h"
+#include <vector>
+using std::vector;
 
-
-void printTwitterHandle(Person const & p) {
-    // dynamic casting - helps in testing polymorphismus.
-    Twitter const * pt = dynamic_cast<Twitter const *>(&p);
-
-    if (pt) {
-        cout << pt->getTwitterHandle() << endl;
-    }
-    else {
-        cout << "Casting not possible." << endl;
-    }
-}
+#include <exception>
 
 int main() {
+    vector v = {1, 2};
 
-    Twitter elon("Elon", "Musk", "elonmusk");
+    // Output of this exception is not that helpful.
+    // But it does help in knowing there's an exception.
+    try {
+        v.at(3);
+    }
+    catch (std::exception const & e) {
+        cout << e.what() << endl;
+    }
 
-    Person& p = elon;
-
-    Twitter& revertTwitter = static_cast<Twitter&>(p);
-
-    printTwitterHandle(p);
-
+    catch(...) {
+        cout << "An uncaught exception occured." << endl;
+    }
 
     return 0;
 }
