@@ -1,37 +1,31 @@
-// at first include standard libraries. Then import rest of header files.
+#include <memory>
 #include <iostream>
-using std::cout;
-using std::endl;
 
-#include <vector>
-using std::vector;
 
-#include "../libPersons/Person.h"
-#include "../libPersons/Twitter.h"
-#include "House.h"
-
-using Address = House*;
-
-class Packet {
-public:
-    Address address;
-};
+void testIfAlive(std::unique_ptr<int> const & ptr) {
+    if (ptr) {
+        std::cout << "Still here!" << std::endl;
+    }
+    else {
+        std::cout << "Gone!" << std::endl;
+    }
+}
 
 int main() {
+    using namespace std;
 
-    // namespace 'Persons' is useful here, as other directories might have
-    // class named 'Person'. It would then result to name collision.
-    vector<House> wallStreet = {House(1), House(0), House(0)};
+    unique_ptr<int> up;
 
-    Packet packet;
-    packet.address = &wallStreet[0];
+    {
+        up = make_unique<int>(5);
+    }
+    testIfAlive(up);
 
-    (packet.address+1)->ringDoorbell();
+    // Now 'up' will become null & 'up2' will take value of 'up'
+    std::unique_ptr<int> up2 = std::move(up);
 
-    // This is function declaration
-    // Person steve() - this is function 'steve' which gives output of datatype 'Person'
-
-    // One of the biggest advantage of creating class is member functions.
+    testIfAlive(up2);
+    testIfAlive(up);
 
     return 0;
 }
