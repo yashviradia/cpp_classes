@@ -5,18 +5,21 @@ using std::endl;
 #include "Person.h"
 #include "Twitter.h"
 
-void printFullName(Person p) {
-    cout << p.getFullName() << endl;
+
+void printTwitterHandle(Person const & p) {
+    // static casting
+    Twitter const & referenceTwitter = static_cast<Twitter const &>(p);
 }
 
 int main() {
 
     Twitter elon("Elon", "Musk", "elonmusk");
 
-    // This is an example of slicing.
-    // by passing Object of class 'Twitter', it will be converted to
-    // Object of class 'Person'
-    printFullName(elon);
+    Person& p = elon;
+
+    Twitter& revertTwitter = static_cast<Twitter&>(p);
+
+
 
     return 0;
 }

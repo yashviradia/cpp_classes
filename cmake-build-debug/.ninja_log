@@ -53,3 +53,12 @@
 12	1558	1692631443785807337	src/libPersons/CMakeFiles/Persons.dir/Person.cpp.o	b552133ce916c7cc
 1558	1629	1692631443865166000	src/libPersons/libPersons.a	beea57bc6c96c88a
 1629	1746	1692631443979091465	src/app/classes	e43b951729f9a35e
+5	1665	1692632002027363205	src/libPersons/CMakeFiles/Persons.dir/Twitter.cpp.o	54474d8515e9c8ca
+4	1674	1692632002036485503	src/libPersons/CMakeFiles/Persons.dir/Person.cpp.o	b552133ce916c7cc
+2	1874	1692632410457660497	src/app/CMakeFiles/classes.dir/main.cpp.o	b4b5988ea938aeee
+5	1875	1692632410464640153	src/libPersons/CMakeFiles/Persons.dir/Person.cpp.o	b552133ce916c7cc
+6	1875	1692632410460063608	src/libPersons/CMakeFiles/Persons.dir/Twitter.cpp.o	54474d8515e9c8ca
+1875	1950	1692632410553171000	src/libPersons/libPersons.a	beea57bc6c96c88a
+1950	2094	1692632410695664961	src/app/classes	e43b951729f9a35e
+1	988	1692632436309533886	src/app/CMakeFiles/classes.dir/main.cpp.o	b4b5988ea938aeee
+989	1061	1692632436388254013	src/app/classes	e43b951729f9a35e

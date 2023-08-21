@@ -20,3 +20,7 @@ Twitter::~Twitter() {
 std::string Twitter::getFullName() const {
     return Person::getFullName() + " " + twitterhandle;
 }
+
+std::string Twitter::getTwitterHandle() const {
+    return twitterhandle;
+}
