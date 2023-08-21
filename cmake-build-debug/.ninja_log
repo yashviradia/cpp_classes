@@ -3,3 +3,11 @@
 2	1763	1692610016519082746	CMakeFiles/classes.dir/main.cpp.o	705ab2075d6e609b
 1109	1218	1692610110140196392	classes	220d9294c3ee367f
 11	1523	1692610016256958634	CMakeFiles/classes.dir/Twitter.cpp.o	947f89c5ef83dab4
+5	1924	1692623945837517267	src/app/CMakeFiles/classes.dir/House.cpp.o	d70c9717bca1ff40
+0	1928	1692623945837581109	src/app/CMakeFiles/classes.dir/main.cpp.o	b4b5988ea938aeee
+6	1928	1692623945848073553	src/libPersons/CMakeFiles/Persons.dir/Person.cpp.o	b552133ce916c7cc
+1926	2354	1692623946277150786	src/libPersons/CMakeFiles/Persons.dir/Twitter.cpp.o	54474d8515e9c8ca
+2354	3077	1692623947007772000	src/libPersons/libPersons.a	beea57bc6c96c88a
+3077	3257	1692623947186197132	src/app/classes	c0d0827a987e346e
+2	1003	1692624041289939430	src/app/CMakeFiles/classes.dir/main.cpp.o	b4b5988ea938aeee
+1003	1125	1692624041414710710	src/app/classes	c0d0827a987e346e
