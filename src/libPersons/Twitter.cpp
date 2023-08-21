@@ -3,10 +3,13 @@
 #include <string>
 using std::string;
 
-namespace Persons {
 
-    Twitter::Twitter(std::string first, std::string last, std::string handle)
-            : Person(first, last), twitterhandle(handle) {
 
-    }
+Twitter::Twitter(std::string first, std::string last, std::string handle)
+        : Person(first, last), twitterhandle(handle) {
+
+}
+
+std::string Twitter::getFullName() const {
+    return Person::getFullName() + " " + twitterhandle;
 }

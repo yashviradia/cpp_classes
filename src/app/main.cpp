@@ -1,31 +1,19 @@
-#include <memory>
 #include <iostream>
+using std::cout;
+using std::endl;
 
-
-void testIfAlive(std::unique_ptr<int> const & ptr) {
-    if (ptr) {
-        std::cout << "Still here!" << std::endl;
-    }
-    else {
-        std::cout << "Gone!" << std::endl;
-    }
-}
+#include "Person.h"
+#include "Twitter.h"
 
 int main() {
-    using namespace std;
+    Twitter elon("Elon", "Musk", "elonmusk");
 
-    unique_ptr<int> up;
+    Person& ref = elon;
+    Person* ptr = &elon;
 
-    {
-        up = make_unique<int>(5);
-    }
-    testIfAlive(up);
+    cout << ptr->getFullName() << endl;
 
-    // Now 'up' will become null & 'up2' will take value of 'up'
-    std::unique_ptr<int> up2 = std::move(up);
 
-    testIfAlive(up2);
-    testIfAlive(up);
 
     return 0;
 }
