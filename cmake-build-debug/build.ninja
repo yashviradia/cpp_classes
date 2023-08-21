@@ -49,23 +49,23 @@ cmake_ninja_workdir = /Users/yashviradia/CLionProjects/classes/cmake-build-debug
 
 build cmake_object_order_depends_target_classes: phony || CMakeFiles/classes.dir
 
-build CMakeFiles/classes.dir/main.cpp.o: CXX_COMPILER__classes_unscanned_Debug /Users/yashviradia/CLionProjects/classes/main.cpp || cmake_object_order_depends_target_classes
-  DEP_FILE = CMakeFiles/classes.dir/main.cpp.o.d
+build CMakeFiles/classes.dir/src/app/main.cpp.o: CXX_COMPILER__classes_unscanned_Debug /Users/yashviradia/CLionProjects/classes/src/app/main.cpp || cmake_object_order_depends_target_classes
+  DEP_FILE = CMakeFiles/classes.dir/src/app/main.cpp.o.d
   FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/classes.dir
-  OBJECT_FILE_DIR = CMakeFiles/classes.dir
+  OBJECT_FILE_DIR = CMakeFiles/classes.dir/src/app
 
-build CMakeFiles/classes.dir/Person.cpp.o: CXX_COMPILER__classes_unscanned_Debug /Users/yashviradia/CLionProjects/classes/Person.cpp || cmake_object_order_depends_target_classes
-  DEP_FILE = CMakeFiles/classes.dir/Person.cpp.o.d
+build CMakeFiles/classes.dir/src/libPersons/Person.cpp.o: CXX_COMPILER__classes_unscanned_Debug /Users/yashviradia/CLionProjects/classes/src/libPersons/Person.cpp || cmake_object_order_depends_target_classes
+  DEP_FILE = CMakeFiles/classes.dir/src/libPersons/Person.cpp.o.d
   FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/classes.dir
-  OBJECT_FILE_DIR = CMakeFiles/classes.dir
+  OBJECT_FILE_DIR = CMakeFiles/classes.dir/src/libPersons
 
-build CMakeFiles/classes.dir/Twitter.cpp.o: CXX_COMPILER__classes_unscanned_Debug /Users/yashviradia/CLionProjects/classes/Twitter.cpp || cmake_object_order_depends_target_classes
-  DEP_FILE = CMakeFiles/classes.dir/Twitter.cpp.o.d
+build CMakeFiles/classes.dir/src/libPersons/Twitter.cpp.o: CXX_COMPILER__classes_unscanned_Debug /Users/yashviradia/CLionProjects/classes/src/libPersons/Twitter.cpp || cmake_object_order_depends_target_classes
+  DEP_FILE = CMakeFiles/classes.dir/src/libPersons/Twitter.cpp.o.d
   FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/classes.dir
-  OBJECT_FILE_DIR = CMakeFiles/classes.dir
+  OBJECT_FILE_DIR = CMakeFiles/classes.dir/src/libPersons
 
 
 # =============================================================================
@@ -75,7 +75,7 @@ build CMakeFiles/classes.dir/Twitter.cpp.o: CXX_COMPILER__classes_unscanned_Debu
 #############################################
 # Link the executable classes
 
-build classes: CXX_EXECUTABLE_LINKER__classes_Debug CMakeFiles/classes.dir/main.cpp.o CMakeFiles/classes.dir/Person.cpp.o CMakeFiles/classes.dir/Twitter.cpp.o
+build classes: CXX_EXECUTABLE_LINKER__classes_Debug CMakeFiles/classes.dir/src/app/main.cpp.o CMakeFiles/classes.dir/src/libPersons/Person.cpp.o CMakeFiles/classes.dir/src/libPersons/Twitter.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk
   OBJECT_DIR = CMakeFiles/classes.dir
   POST_BUILD = :
