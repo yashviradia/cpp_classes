@@ -12,3 +12,10 @@
 7	1979	1692629087989213445	src/app/CMakeFiles/classes.dir/Messenger.cpp.o	938d10efaa0fdce
 2	1101	1692649512144566286	src/app/CMakeFiles/classes.dir/main.cpp.o	b4b5988ea938aeee
 1101	1270	1692649512327012081	src/app/classes	e43b951729f9a35e
+12	2993	1692805436502324771	src/libPersons/CMakeFiles/Persons.dir/Twitter.cpp.o	54474d8515e9c8ca
+10	2998	1692805436507283391	src/libPersons/CMakeFiles/Persons.dir/Person.cpp.o	b552133ce916c7cc
+4	1470	1692805459342424925	src/libPersons/CMakeFiles/Persons.dir/Twitter.cpp.o	54474d8515e9c8ca
+3	1483	1692805459345493840	src/libPersons/CMakeFiles/Persons.dir/Person.cpp.o	b552133ce916c7cc
+3	1517	1692805459392302674	src/app/CMakeFiles/classes.dir/main.cpp.o	b4b5988ea938aeee
+1484	1637	1692805459522678000	src/libPersons/libPersons.a	beea57bc6c96c88a
+1637	1851	1692805459735798746	src/app/classes	e43b951729f9a35e

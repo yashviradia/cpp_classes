@@ -35,6 +35,14 @@ int Person::getID() const {
     return id;
 }
 
+Person& Person::operator+=(const Person &p) {
+    firstName += " " + p.firstName;
+    lastName += " " + p.lastName;
+    id += p.getID();
+
+    return *this;
+}
+
 
 // here is scope resolution operator very important i.e. 'Person'
 std::string Person::getFullName() const {

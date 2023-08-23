@@ -4,7 +4,7 @@
 template<class T>
 class Accumulator{
 private:
-    int value;
+    T value;
 public:
     Accumulator(T v) : value(v){}
     void add(T v) { value += v; }
