@@ -28,8 +28,10 @@ public:
 
     int getID() const;
 
+    Person& operator+=(Person const & p);
+
     // with this method assigned to '0', 'Person' is now abstract class.
-    virtual std::string getFullName() const = 0;
+    virtual std::string getFullName() const;
 };
 
 

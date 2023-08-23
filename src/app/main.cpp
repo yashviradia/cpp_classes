@@ -7,13 +7,14 @@ using std::string;
 
 #include "Accumulator.h"
 
+#include "Person.h"
+
 int main() {
 
-    Accumulator<int> acc(0);
-    acc.add(1);
-    acc.add(9);
-    cout << acc.getValue() << endl;
-    
+    Accumulator<Person> acc(Person("Elon", "Musk"));
+    acc.add(Person("Jeff", "Musk"));
+    cout << acc.getValue().getFullName() << endl;
+
 
     return 0;
 }
