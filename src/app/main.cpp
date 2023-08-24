@@ -1,37 +1,42 @@
-#include <iostream>
-#include <vector>
+#include <tuple>
+using std::tuple;
+using std::make_tuple;
+using std::get;
 
+#include <iostream>
 using std::cout;
 using std::endl;
 
-template<typename Func>
-long long timeIt(Func f)
-{
-    auto begin = std::chrono::system_clock::now();
+tuple<int, int> tuple_minmax(int first, int second) {
 
-    f();
+// The following code could be written easily:
+//    tuple<int, int> result;
+//    if (first <= second) {
+//        get<0>(result) = first;
+//        get<1>(result) = second;
+//    }
+//    else {
+//        get<0>(result) = second;
+//        get<1>(result) = first;
+//    }
+//
+//    return result;
 
-    auto end = std::chrono::system_clock::now();
-    return std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count();
-}
+    return (first <= second) ? std::tie(first, second) : std::tie(second, first);
 
-void createVector(std::vector<int> & result, int numItems) {
-    for (int i = 0; i < numItems; i++) {
-        result.push_back(i);
-    }
 }
 
 int main() {
-    using namespace std;
 
-    vector<int> v1;
-    vector<int> v2;
+    int a = 5;
+    int b = 3;
 
-    auto lambda1 = [&](){ createVector(v1, 100); };
-    auto lambda2 = [&](){ createVector(v2, 1000000); };
+    int minVal;
+    int maxVal;
 
-    cout << "100:      " << timeIt(lambda1) << endl;
-    cout << "1000000:  " << timeIt(lambda2) << endl;
+    std::tie(minVal, maxVal) = tuple_minmax(a, b);
+
+    cout << minVal << ", " << maxVal << endl;
 
     return 0;
 }
