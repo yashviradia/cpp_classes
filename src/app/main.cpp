@@ -1,15 +1,24 @@
-#include <set>
+#include <unordered_set>
 #include <iostream>
 
 #include "Person.h"
 
+class BadHash {
+public:
+    int operator()(int){ return 1; };
+};
+
 int main() {
     using namespace std;
 
-    set<Person const> persons = { Person("Elon", "Musk"), Person("Bruce", "Wayne")};
+    unordered_set<int, BadHash> nums;
 
-    for (auto const & p : persons) {
-        cout << p.getFullName() << ", ";
+    for (int i = 0; i < 10; ++i) {
+        nums.insert(i);
+    }
+
+    for (auto const & i : nums) {
+        cout << i << ", ";
     }
 
     return 0;
