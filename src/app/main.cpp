@@ -1,24 +1,32 @@
-#include <unordered_set>
 #include <iostream>
-
-#include "Person.h"
-
-class BadHash {
-public:
-    int operator()(int){ return 1; };
-};
+#include <vector>
+#include <stack>
 
 int main() {
     using namespace std;
 
-    unordered_set<int, BadHash> nums;
+    vector<int> nums = {1, 2, 3, 4};
 
-    for (int i = 0; i < 10; ++i) {
-        nums.insert(i);
+    stack<int> stack;
+
+    for (auto item : nums) {
+        stack.push(item);
     }
 
-    for (auto const & i : nums) {
-        cout << i << ", ";
+    vector<int> reverted;
+    while(!stack.empty()) {
+        reverted.push_back(stack.top());
+        stack.pop();
+    }
+
+    for (auto item : nums) {
+        cout << item << ", ";
+    }
+
+    cout << endl;
+
+    for (auto item : reverted) {
+        cout << item << ", ";
     }
 
     return 0;
