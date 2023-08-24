@@ -29,10 +29,13 @@ public:
     int getID() const;
 
     Person& operator+=(Person const & p);
+    bool operator<(Person const & rhs);
+    bool operator<(int rhs);
 
     // with this method assigned to '0', 'Person' is now abstract class.
     virtual std::string getFullName() const;
 };
 
+bool operator<(int lhs, Person const & rhs);
 
 #endif //CLASSES_PERSON_H
