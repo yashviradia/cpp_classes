@@ -1,42 +1,22 @@
-#include <tuple>
-using std::tuple;
-using std::make_tuple;
-using std::get;
+#include <string>
+using std::string;
 
 #include <iostream>
 using std::cout;
 using std::endl;
 
-tuple<int, int> tuple_minmax(int first, int second) {
+#include <string>
+using std::string;
 
-// The following code could be written easily:
-//    tuple<int, int> result;
-//    if (first <= second) {
-//        get<0>(result) = first;
-//        get<1>(result) = second;
-//    }
-//    else {
-//        get<0>(result) = second;
-//        get<1>(result) = first;
-//    }
-//
-//    return result;
-
-    return (first <= second) ? std::tie(first, second) : std::tie(second, first);
-
-}
+#include <utility>
+using std::pair;
+using std::make_pair;
 
 int main() {
 
-    int a = 5;
-    int b = 3;
+    pair<int, string> myPair = make_pair(1, "Second");
 
-    int minVal;
-    int maxVal;
-
-    std::tie(minVal, maxVal) = tuple_minmax(a, b);
-
-    cout << minVal << ", " << maxVal << endl;
+    cout << myPair.first << ", " << myPair.second << endl;
 
     return 0;
 }
