@@ -49,3 +49,15 @@ std::string Person::getFullName() const {
     return firstName + " " + lastName;
 }
 
+bool Person::operator<(Person const & rhs) {
+    return this->id < rhs.id;
+}
+
+bool Person::operator<(int rhs) {
+    return this->id < rhs;
+}
+
+bool operator<(int lhs, const Person &rhs) {
+    return lhs < rhs.getID();
+}
+

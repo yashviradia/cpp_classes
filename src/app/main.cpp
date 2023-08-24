@@ -1,20 +1,22 @@
 #include <iostream>
+
 using std::cout;
 using std::endl;
 
-#include <string>
-using std::string;
-
-#include "Accumulator.h"
-
-#include "Person.h"
+class Functor {
+public:
+    int x;
+    int operator() (int val) { return x + val; };
+};
 
 int main() {
 
-    Accumulator<Person> acc(Person("Elon", "Musk"));
-    acc.add(Person("Jeff", "Musk"));
-    cout << acc.getValue().getFullName() << endl;
+    auto lambda = [](int val){ return val; };
 
+    Functor func;
+    func.x = 5;
+
+    cout << func(7) << endl;
 
     return 0;
 }
