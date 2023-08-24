@@ -1,22 +1,16 @@
-#include <string>
-using std::string;
-
+#include <set>
 #include <iostream>
-using std::cout;
-using std::endl;
 
-#include <string>
-using std::string;
-
-#include <utility>
-using std::pair;
-using std::make_pair;
+#include "Person.h"
 
 int main() {
+    using namespace std;
 
-    pair<int, string> myPair = make_pair(1, "Second");
+    set<Person const> persons = { Person("Elon", "Musk"), Person("Bruce", "Wayne")};
 
-    cout << myPair.first << ", " << myPair.second << endl;
+    for (auto const & p : persons) {
+        cout << p.getFullName() << ", ";
+    }
 
     return 0;
 }
