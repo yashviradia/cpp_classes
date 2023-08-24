@@ -1,33 +1,22 @@
 #include <iostream>
-#include <vector>
-#include <stack>
+#include <queue>
 
 int main() {
     using namespace std;
 
-    vector<int> nums = {1, 2, 3, 4};
+    queue<int> queue;
+    queue.push(1);
 
-    stack<int> stack;
+    cout << queue.front() << ", ";
+    queue.pop();
 
-    for (auto item : nums) {
-        stack.push(item);
+    queue.push(3);
+
+    while (!queue.empty()) {
+        cout << queue.front() << ", ";
+        queue.pop();
     }
 
-    vector<int> reverted;
-    while(!stack.empty()) {
-        reverted.push_back(stack.top());
-        stack.pop();
-    }
-
-    for (auto item : nums) {
-        cout << item << ", ";
-    }
-
-    cout << endl;
-
-    for (auto item : reverted) {
-        cout << item << ", ";
-    }
 
     return 0;
 }
