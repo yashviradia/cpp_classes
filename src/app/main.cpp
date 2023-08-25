@@ -1,23 +1,25 @@
+#include <string>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-//void output(double value = 0) {
-//    cout << value << endl;
-//}
+struct Person { string name; };
 
-void output(int value = 0) {
-    cout << value << endl;
-}
-
-void increment(int & number) {
-    output(++number);
+vector<Person>* cloneVector( vector<Person> & people ) {
+    vector<Person> result = people;
+    return &result;
 }
 
 int main() {
-    int x = 1;
-    increment(x);
-    increment(x);
+    vector<Person> dinos = {{"Earl"}, {"Fran"}, {"Baby"}};
+
+    Person *baby = &dinos.back();
+
+    auto result = cloneVector(dinos);
+
+    // cout << baby->name << endl;
+    cout << result->back().name << endl;
 
     return 0;
 }
