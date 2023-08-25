@@ -10,13 +10,14 @@ void output(int value = 0) {
     cout << value << endl;
 }
 
-void increment(int number) {
-    output(number + 1.5);
+void increment(int & number) {
+    output(++number);
 }
 
 int main() {
     int x = 1;
     increment(x);
-    output();
+    increment(x);
+
     return 0;
 }
