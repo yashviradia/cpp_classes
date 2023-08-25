@@ -1,19 +1,23 @@
 #include <iostream>
 
-float getPI() {
-    return 3.14f;
-}
+class Person {
+public:
+    Person(std::string& name) : name(name) {}
 
-float cylinder_volume() {
-    auto pi = getPI();
+    void printName() const {
+        std::cout << name << ". My name is not important." << std::endl;
+    }
+private:
+    std::string name;
 
-    auto radius = 15;
+};
 
-    auto height = 9.265;
-
-    return static_cast<float>(pi * radius * radius * height);
+void printPerson(const Person& p) {
+    p.printName();
 }
 
 int main() {
-    std::cout << cylinder_volume() << std::endl;
+    Person p ("halli");
+    printPerson(p);
+    return 0;
 }
