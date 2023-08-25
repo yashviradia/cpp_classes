@@ -1,23 +1,22 @@
 #include <iostream>
 
-class Person {
-public:
-    Person(std::string& name) : name(name) {}
+using namespace std;
 
-    void printName() const {
-        std::cout << name << ". My name is not important." << std::endl;
-    }
-private:
-    std::string name;
+//void output(double value = 0) {
+//    cout << value << endl;
+//}
 
-};
+void output(int value = 0) {
+    cout << value << endl;
+}
 
-void printPerson(const Person& p) {
-    p.printName();
+void increment(int number) {
+    output(number + 1.5);
 }
 
 int main() {
-    Person p ("halli");
-    printPerson(p);
+    int x = 1;
+    increment(x);
+    output();
     return 0;
 }
