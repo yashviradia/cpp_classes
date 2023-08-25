@@ -1,22 +1,24 @@
+#include <vector>
 #include <iostream>
-#include <queue>
+#include <numeric>
+#include <vector>
 
 int main() {
-    using namespace std;
+    std::vector<int> vec(10);
 
-    queue<int> queue;
-    queue.push(1);
+    std::iota(vec.begin(), vec.end(), 1);
 
-    cout << queue.front() << ", ";
-    queue.pop();
+    std::transform(vec.begin(), vec.end(), vec.begin(),
+                   [](int val){return val * val; });
 
-    queue.push(3);
+    for (std::size_t i = 0; i < vec.size(); i++) {
+        vec[i] = vec[vec.size() - i - 1];
+    };
 
-    while (!queue.empty()) {
-        cout << queue.front() << ", ";
-        queue.pop();
+    for (auto const v : vec) {
+        std::cout << v << " ";
     }
+    std::cout << std::endl;
 
 
-    return 0;
 }
