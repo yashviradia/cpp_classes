@@ -1,25 +1,23 @@
-#include <string>
-#include <iostream>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
-struct Person { string name; };
-
-vector<Person>* cloneVector( vector<Person> & people ) {
-    vector<Person> result = people;
-    return &result;
-}
-
 int main() {
-    vector<Person> dinos = {{"Earl"}, {"Fran"}, {"Baby"}};
+    auto vA = make_unique<vector<int>>(vector{ 1, 2, 3});
 
-    Person *baby = &dinos.back();
+    vector<int> vB = *vA;
+    vA->push_back(4);
+    vB.push_back(5);
 
-    auto result = cloneVector(dinos);
+//    unique_ptr<vector<int>> vC = std::move(vA);
+    vA->push_back(6);
+    vB.push_back(7);
+//    vC->push_back(8);
 
-    // cout << baby->name << endl;
-    cout << result->back().name << endl;
-
-    return 0;
+    cout << "vB: ";
+    for (int num : vB) {
+        cout << num << " ";
+    }
+    cout << endl;
 }
